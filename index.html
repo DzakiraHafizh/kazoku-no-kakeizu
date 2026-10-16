@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>かぞくのかけいず</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- Judul halaman -->
+  <header class="page-header">
+    <h1 class="paired-text title">
+      <span class="text-pair">
+        <span class="pair-japanese">かぞくの</span>
+        <span class="pair-romaji" lang="ja-Latn">kazoku no</span>
+      </span>
+
+      <span class="text-pair">
+        <span class="pair-japanese">かけいず</span>
+        <span class="pair-romaji" lang="ja-Latn">kakeizu</span>
+      </span>
+    </h1>
+  </header>
+
+  <main>
+    <!-- Pengantar keluarga -->
+    <section class="family-intro" aria-label="Pengantar keluarga">
+      <p class="paired-text">
+        <span class="text-pair">
+          <span class="pair-japanese">これは</span>
+          <span class="pair-romaji" lang="ja-Latn">Kore wa</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">わたしの</span>
+          <span class="pair-romaji" lang="ja-Latn">watashi no</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">かぞくです。</span>
+          <span class="pair-romaji" lang="ja-Latn">kazoku desu.</span>
+        </span>
+      </p>
+
+      <p class="paired-text">
+        <span class="text-pair">
+          <span class="pair-japanese">わたしの</span>
+          <span class="pair-romaji" lang="ja-Latn">Watashi no</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">かぞくは</span>
+          <span class="pair-romaji" lang="ja-Latn">kazoku wa</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">よにんです。</span>
+          <span class="pair-romaji" lang="ja-Latn">yonin desu.</span>
+        </span>
+      </p>
+
+      <p class="paired-text">
+        <span class="text-pair">
+          <span class="pair-japanese">わたしと</span>
+          <span class="pair-romaji" lang="ja-Latn">Watashi to</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">ちちと</span>
+          <span class="pair-romaji" lang="ja-Latn">chichi to</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">ははと</span>
+          <span class="pair-romaji" lang="ja-Latn">haha to</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">おとうとです。</span>
+          <span class="pair-romaji" lang="ja-Latn">otouto desu.</span>
+        </span>
+      </p>
+
+      <p class="paired-text">
+        <span class="text-pair">
+          <span class="pair-japanese">わたしは</span>
+          <span class="pair-romaji" lang="ja-Latn">Watashi wa</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">ふたり</span>
+          <span class="pair-romaji" lang="ja-Latn">futari</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">きょうだいです。</span>
+          <span class="pair-romaji" lang="ja-Latn">kyōdai desu.</span>
+        </span>
+      </p>
+
+      <p class="paired-text">
+        <span class="text-pair">
+          <span class="pair-japanese">おとうとは</span>
+          <span class="pair-romaji" lang="ja-Latn">Otouto wa</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">ひとりです。</span>
+          <span class="pair-romaji" lang="ja-Latn">hitori desu.</span>
+        </span>
+      </p>
+
+      <p class="paired-text">
+        <span class="text-pair">
+          <span class="pair-japanese">わたしは</span>
+          <span class="pair-romaji" lang="ja-Latn">Watashi wa</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">いちばんめです。</span>
+          <span class="pair-romaji" lang="ja-Latn">ichibanme desu.</span>
+        </span>
+      </p>
+
+      <p class="paired-text">
+        <span class="text-pair">
+          <span class="pair-japanese">わたしは</span>
+          <span class="pair-romaji" lang="ja-Latn">Watashi wa</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">いちばん</span>
+          <span class="pair-romaji" lang="ja-Latn">ichiban</span>
+        </span>
+        <span class="text-pair">
+          <span class="pair-japanese">うえです。</span>
+          <span class="pair-romaji" lang="ja-Latn">ue desu.</span>
+        </span>
+      </p>
+    </section>
+
+    <!-- Petunjuk geser (hanya tampil di layar kecil) -->
+    <p class="tree-hint" lang="id">Geser ke samping untuk melihat seluruh bagan →</p>
+
+    <!-- Bagan keluarga -->
+    <div class="tree-wrapper">
+      <section class="family-tree" aria-label="Bagan keluarga">
+        <svg
+          class="line-tree"
+          viewBox="0 0 1100 820"
+          aria-hidden="true"
+        >
+          <!-- Garis pasangan (di tengah tinggi kartu: 80 + 250/2 = 205) -->
+          <line x1="505" y1="205" x2="595" y2="205"></line>
+
+          <!-- Garis menuju percabangan -->
+          <line x1="550" y1="205" x2="550" y2="390"></line>
+          <line x1="410" y1="390" x2="690" y2="390"></line>
+
+          <!-- Garis menuju anak -->
+          <line x1="410" y1="390" x2="410" y2="450"></line>
+          <line x1="690" y1="390" x2="690" y2="450"></line>
+        </svg>
+
+        <!-- Ayah -->
+        <article class="person male father">
+          <div class="avatar">
+            <img
+              src="images/ayah.svg"
+              alt="Ilustrasi ayah"
+              width="110"
+              height="110"
+            >
+          </div>
+
+          <h2 class="relation text-pair">
+            <span class="pair-japanese">ちち</span>
+            <span class="pair-romaji" lang="ja-Latn">chichi</span>
+          </h2>
+
+          <button
+            class="person-toggle"
+            type="button"
+            aria-label="Deskripsi ayah"
+            aria-expanded="false"
+            aria-controls="description-father"
+          ></button>
+
+          <div
+            class="description"
+            id="description-father"
+            tabindex="0"
+            role="region"
+            aria-label="Deskripsi ayah"
+            hidden
+          >
+            <p class="paired-text">
+              <span class="text-pair">
+                <span class="pair-japanese">みどりの</span>
+                <span class="pair-romaji" lang="ja-Latn">Midori no</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ティーシャツの</span>
+                <span class="pair-romaji" lang="ja-Latn">tii-shatsu no</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ひとは</span>
+                <span class="pair-romaji" lang="ja-Latn">hito wa</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ちちです。</span>
+                <span class="pair-romaji" lang="ja-Latn">chichi desu.</span>
+              </span>
+            </p>
+
+            <p class="paired-text">
+              <span class="text-pair">
+                <span class="pair-japanese">しんせつです。</span>
+                <span class="pair-romaji" lang="ja-Latn">Shinsetsu desu.</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">きびしいです。</span>
+                <span class="pair-romaji" lang="ja-Latn">Kibishii desu.</span>
+              </span>
+            </p>
+
+            <p class="paired-text">
+              <span class="text-pair">
+                <span class="pair-japanese">しゅうまつ、</span>
+                <span class="pair-romaji" lang="ja-Latn">Shūmatsu,</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ちちは</span>
+                <span class="pair-romaji" lang="ja-Latn">chichi wa</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">よく</span>
+                <span class="pair-romaji" lang="ja-Latn">yoku</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">はたらきます。</span>
+                <span class="pair-romaji" lang="ja-Latn">hatarakimasu.</span>
+              </span>
+            </p>
+          </div>
+        </article>
+
+        <!-- Ibu -->
+        <article class="person female mother">
+          <div class="avatar">
+            <img
+              src="images/ibu.svg"
+              alt="Ilustrasi ibu"
+              width="110"
+              height="110"
+            >
+          </div>
+
+          <h2 class="relation text-pair">
+            <span class="pair-japanese">はは</span>
+            <span class="pair-romaji" lang="ja-Latn">haha</span>
+          </h2>
+
+          <button
+            class="person-toggle"
+            type="button"
+            aria-label="Deskripsi ibu"
+            aria-expanded="false"
+            aria-controls="description-mother"
+          ></button>
+
+          <div
+            class="description"
+            id="description-mother"
+            tabindex="0"
+            role="region"
+            aria-label="Deskripsi ibu"
+            hidden
+          >
+            <p class="paired-text">
+              <span class="text-pair">
+                <span class="pair-japanese">ちゃいろい</span>
+                <span class="pair-romaji" lang="ja-Latn">Chairoi</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">スカートの</span>
+                <span class="pair-romaji" lang="ja-Latn">sukaato no</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ひとは</span>
+                <span class="pair-romaji" lang="ja-Latn">hito wa</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ははです。</span>
+                <span class="pair-romaji" lang="ja-Latn">haha desu.</span>
+              </span>
+            </p>
+
+            <p class="paired-text">
+              <span class="text-pair">
+                <span class="pair-japanese">あたたかいです。</span>
+                <span class="pair-romaji" lang="ja-Latn">Atatakai desu.</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">やさしいです。</span>
+                <span class="pair-romaji" lang="ja-Latn">Yasashii desu.</span>
+              </span>
+            </p>
+
+            <p class="paired-text">
+              <span class="text-pair">
+                <span class="pair-japanese">しゅうまつ、</span>
+                <span class="pair-romaji" lang="ja-Latn">Shūmatsu,</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ははは</span>
+                <span class="pair-romaji" lang="ja-Latn">haha wa</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">さんぽを</span>
+                <span class="pair-romaji" lang="ja-Latn">sanpo o</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">します。</span>
+                <span class="pair-romaji" lang="ja-Latn">shimasu.</span>
+              </span>
+            </p>
+          </div>
+        </article>
+
+        <!-- Saya -->
+        <article class="person male child-one">
+          <div class="avatar">
+            <img
+              src="images/saya.svg"
+              alt="Ilustrasi saya"
+              width="110"
+              height="110"
+            >
+          </div>
+
+          <h2 class="relation text-pair">
+            <span class="pair-japanese">わたし</span>
+            <span class="pair-romaji" lang="ja-Latn">watashi</span>
+          </h2>
+
+          <button
+            class="person-toggle"
+            type="button"
+            aria-label="Deskripsi saya"
+            aria-expanded="false"
+            aria-controls="description-self"
+          ></button>
+
+          <div
+            class="description"
+            id="description-self"
+            tabindex="0"
+            role="region"
+            aria-label="Deskripsi saya"
+            hidden
+          >
+            <p class="paired-text">
+              <span class="text-pair">
+                <span class="pair-japanese">あかい</span>
+                <span class="pair-romaji" lang="ja-Latn">Akai</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ジャケットの</span>
+                <span class="pair-romaji" lang="ja-Latn">jaketto no</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ひとは</span>
+                <span class="pair-romaji" lang="ja-Latn">hito wa</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">わたしです。</span>
+                <span class="pair-romaji" lang="ja-Latn">watashi desu.</span>
+              </span>
+            </p>
+
+            <p class="paired-text">
+              <span class="text-pair">
+                <span class="pair-japanese">おとなしいです。</span>
+                <span class="pair-romaji" lang="ja-Latn">Otonashii desu.</span>
+              </span>
+            </p>
+
+            <p class="paired-text">
+              <span class="text-pair">
+                <span class="pair-japanese">しゅうまつ、</span>
+                <span class="pair-romaji" lang="ja-Latn">Shūmatsu,</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">わたしは</span>
+                <span class="pair-romaji" lang="ja-Latn">watashi wa</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">たいてい</span>
+                <span class="pair-romaji" lang="ja-Latn">taitei</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">たくさん</span>
+                <span class="pair-romaji" lang="ja-Latn">takusan</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ねます。</span>
+                <span class="pair-romaji" lang="ja-Latn">nemasu.</span>
+              </span>
+            </p>
+          </div>
+        </article>
+
+        <!-- Adik -->
+        <article class="person male child-two">
+          <div class="avatar">
+            <img
+              src="images/adik.svg"
+              alt="Ilustrasi adik laki-laki"
+              width="110"
+              height="110"
+            >
+          </div>
+
+          <h2 class="relation text-pair">
+            <span class="pair-japanese">おとうと</span>
+            <span class="pair-romaji" lang="ja-Latn">otouto</span>
+          </h2>
+
+          <button
+            class="person-toggle"
+            type="button"
+            aria-label="Deskripsi adik laki-laki"
+            aria-expanded="false"
+            aria-controls="description-brother"
+          ></button>
+
+          <div
+            class="description"
+            id="description-brother"
+            tabindex="0"
+            role="region"
+            aria-label="Deskripsi adik laki-laki"
+            hidden
+          >
+            <p class="paired-text">
+              <span class="text-pair">
+                <span class="pair-japanese">しろい</span>
+                <span class="pair-romaji" lang="ja-Latn">Shiroi</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ふくの</span>
+                <span class="pair-romaji" lang="ja-Latn">fuku no</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ひとは</span>
+                <span class="pair-romaji" lang="ja-Latn">hito wa</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">おとうとです。</span>
+                <span class="pair-romaji" lang="ja-Latn">otouto desu.</span>
+              </span>
+            </p>
+
+            <p class="paired-text">
+              <span class="text-pair">
+                <span class="pair-japanese">あかるいです。</span>
+                <span class="pair-romaji" lang="ja-Latn">Akarui desu.</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">げんきです。</span>
+                <span class="pair-romaji" lang="ja-Latn">Genki desu.</span>
+              </span>
+            </p>
+
+            <p class="paired-text">
+              <span class="text-pair">
+                <span class="pair-japanese">しゅうまつ、</span>
+                <span class="pair-romaji" lang="ja-Latn">Shūmatsu,</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">おとうとは</span>
+                <span class="pair-romaji" lang="ja-Latn">otouto wa</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">よく</span>
+                <span class="pair-romaji" lang="ja-Latn">yoku</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">ともだちと</span>
+                <span class="pair-romaji" lang="ja-Latn">tomodachi to</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">つりに</span>
+                <span class="pair-romaji" lang="ja-Latn">tsuri ni</span>
+              </span>
+              <span class="text-pair">
+                <span class="pair-japanese">いきます。</span>
+                <span class="pair-romaji" lang="ja-Latn">ikimasu.</span>
+              </span>
+            </p>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <!-- Identitas pembuat -->
+  <footer class="site-footer" lang="id">
+    @Dzakira Hafizh Bin Naskah Armansyah
+  </footer>
+</body>
+</html>
